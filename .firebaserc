@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "solut-web"
+  },
+  "targets": {
+    "solut-web": {
+      "hosting": {
+        "solut": [
+          "solut"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

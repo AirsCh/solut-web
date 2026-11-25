@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLUT - Layanan Warga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen font-sans text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 w-full">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Tautan Logo SOLUT ke index.html -->
+            <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                <div class="text-blue-600 font-bold text-2xl">SOLUT</div>
+                <div class="text-xs text-gray-500 uppercase leading-tight">Loktabat Utara</div>
+            </a>
+            <nav class="hidden md:flex gap-6 text-sm font-medium text-gray-700">
+                <a href="index.html" class="hover:text-blue-600">Beranda</a>
+                <a href="layanan.html" class="hover:text-blue-600">Layanan</a>
+                <a href="#" class="hover:text-blue-600">Contact Us</a>
+            </nav>
+            <div>
+                <a href="login.html" class="bg-blue-600 text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition">Login Petugas</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow py-12 px-4 container mx-auto">
+        <div class="text-center mb-10">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Daftar Pelayanan Surat</h1>
+            <p class="text-gray-500">Pilih jenis surat yang Anda butuhkan.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            <!-- 1. SKTM -->
+            <a href="form-sktm.html" class="block group bg-white border rounded-xl p-6 shadow-sm hover:shadow-md hover:border-blue-400 transition cursor-pointer card-hover-effect">
+                <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center font-bold mb-4">S</div>
+                <h3 class="font-bold text-lg text-gray-800 mb-2">Surat Keterangan Tidak Mampu</h3>
+                <p class="text-sm text-gray-500 mb-6 h-10">Surat pengantar untuk keluarga kurang mampu.</p>
+                <div class="text-blue-600 font-semibold text-sm group-hover:underline">Mulai Pengajuan &rarr;</div>
+            </a>
+            
+            <!-- 2. Keterangan Belum Memiliki Rumah -->
+            <a href="form-ket-belum-rumah.html" class="block group bg-white border rounded-xl p-6 shadow-sm hover:shadow-md hover:border-teal-400 transition cursor-pointer card-hover-effect">
+                <div class="w-10 h-10 bg-teal-100 text-teal-600 rounded-lg flex items-center justify-center font-bold mb-4">R</div>
+                <h3 class="font-bold text-lg text-gray-800 mb-2">Surat Keterangan Belum Memiliki Rumah</h3>
+                <p class="text-sm text-gray-500 mb-6 h-10">Keterangan resmi status kepemilikan tempat tinggal.</p>
+                <div class="text-teal-600 font-semibold text-sm group-hover:underline">Mulai Pengajuan &rarr;</div>
+            </a>
+
+            <!-- 3. Permohonan Nikah -->
+            <a href="form-permohonan-nikah.html" class="block group bg-white border rounded-xl p-6 shadow-sm hover:shadow-md hover:border-pink-400 transition cursor-pointer card-hover-effect">
+                <div class="w-10 h-10 bg-pink-100 text-pink-600 rounded-lg flex items-center justify-center font-bold mb-4">N</div>
+                <h3 class="font-bold text-lg text-gray-800 mb-2">Surat Permohonan Nikah</h3>
+                <p class="text-sm text-gray-500 mb-6 h-10">Pengantar resmi untuk permohonan pendaftaran pernikahan.</p>
+                <div class="text-pink-600 font-semibold text-sm group-hover:underline">Mulai Pengajuan &rarr;</div>
+            </a>
+
+            <!-- 4. Keterangan Janda/Duda -->
+            <a href="form-ket-janda-duda.html" class="block group bg-white border rounded-xl p-6 shadow-sm hover:shadow-md hover:border-purple-400 transition cursor-pointer card-hover-effect">
+                <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center font-bold mb-4">J</div>
+                <h3 class="font-bold text-lg text-gray-800 mb-2">Surat Keterangan Janda / Duda</h3>
+                <p class="text-sm text-gray-500 mb-6 h-10">Keterangan status cerai hidup atau cerai mati.</p>
+                <div class="text-purple-600 font-semibold text-sm group-hover:underline">Mulai Pengajuan &rarr;</div>
+            </a>
+
+            <!-- 5. Keterangan Belum Menikah -->
+            <a href="form-ket-belum-menikah.html" class="block group bg-white border rounded-xl p-6 shadow-sm hover:shadow-md hover:border-indigo-400 transition cursor-pointer card-hover-effect">
+                <div class="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center font-bold mb-4">B</div>
+                <h3 class="font-bold text-lg text-gray-800 mb-2">Surat Keterangan Belum Menikah</h3>
+                <p class="text-sm text-gray-500 mb-6 h-10">Keterangan resmi belum pernah melangsungkan pernikahan.</p>
+                <div class="text-indigo-600 font-semibold text-sm group-hover:underline">Mulai Pengajuan &rarr;</div>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-10 mt-auto">
+        <div class="text-center text-gray-400 text-xs">&copy; 2026 SOLUT Loktabat Utara. All rights reserved.</div>
+    </footer>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

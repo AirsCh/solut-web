@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLUT - Beranda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col w-full font-sans text-gray-800">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 w-full">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Tautan Logo SOLUT ke index.html -->
+            <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                <div class="text-blue-600 font-bold text-2xl">SOLUT</div>
+                <div class="text-xs text-gray-500 uppercase leading-tight">Loktabat Utara</div>
+            </a>
+            <nav class="hidden md:flex gap-6 text-sm font-medium text-gray-700">
+                <a href="index.html" class="text-blue-600 font-semibold">Beranda</a>
+                <a href="layanan.html" class="hover:text-blue-600">Layanan</a>
+                <a href="#footer" class="hover:text-blue-600">Contact Us</a>
+            </nav>
+            <div>
+                <!-- ID btnNavAuth ditambahkan untuk diubah oleh script.js -->
+                <a href="login.html" id="btnNavAuth" class="bg-blue-600 text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition">Login Petugas</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow w-full">
+        <!-- HERO SECTION -->
+        <section class="bg-blue-800 text-white py-20 px-4 w-full">
+            <div class="container mx-auto max-w-4xl text-center md:text-left">
+                <span class="bg-blue-700/50 text-xs px-3 py-1 rounded-full mb-4 inline-block">PORTAL RESMI LOKTABAT UTARA</span>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">SOLUT: Surat Online Loktabat Utara</h1>
+                <p class="mb-8 text-blue-100 max-w-2xl">Mendukung untuk Mewujudkan Pelayanan Publik yang Cepat, Tepat, Responsif dan Transparan.</p>
+                <a href="layanan.html" class="bg-white text-blue-800 px-6 py-3 rounded-md font-semibold hover:bg-gray-100 inline-block transition">Ajukan Surat &rarr;</a>
+            </div>
+        </section>
+
+        <!-- ACTION CARDS (1 KARTU LEBAR PENUH) -->
+        <section class="container mx-auto px-4 -mt-10 mb-16 relative z-20">
+            <div class="grid grid-cols-1 gap-4 max-w-4xl mx-auto">
+                <div onclick="window.location.href='layanan.html'" class="bg-blue-600 text-white p-6 rounded-lg shadow-lg flex items-center justify-between hover:bg-blue-700 transition cursor-pointer card-hover-effect">
+                    <div class="flex items-center gap-4">
+                        <div class="text-3xl">📄</div>
+                        <div>
+                            <h3 class="font-bold text-lg">Ajukan Surat</h3>
+                            <p class="text-sm text-blue-200">Online tanpa antre</p>
+                        </div>
+                    </div>
+                    <span class="text-xl font-semibold text-blue-100 hidden sm:inline">&rarr;</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="bg-white border-t py-10 mt-auto w-full">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-start gap-8 text-sm">
+            <!-- KOLOM KIRI: LOGO & DESKRIPSI -->
+            <div class="max-w-sm">
+                <div class="text-blue-600 font-bold text-xl mb-4">SOLUT</div>
+                <p class="text-gray-500">Sistem Informasi Pelayanan Administrasi Surat Online Loktabat Utara.</p>
+            </div>
+
+            <!-- KELOMPOK KANAN: NAVIGASI & HUBUNGI KAMI -->
+            <div class="flex flex-col sm:flex-row gap-10 md:gap-16">
+                <div>
+                    <h4 class="font-bold mb-4 text-gray-800">Navigasi</h4>
+                    <ul class="text-gray-500 space-y-2">
+                        <li><a href="index.html" class="hover:text-blue-600">Beranda</a></li>
+                        <li><a href="layanan.html" class="hover:text-blue-600">Ajukan Surat</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-gray-800">Hubungi Kami</h4>
+                    <a href="https://maps.app.goo.gl/Zm7SEbcYgf2nGtu2A" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-gray-500 hover:text-blue-600 transition mb-4">
+                        <span>📍</span>
+                        <span>Kelurahan Loktabat Utara, Banjarbaru</span>
+                    </a>
+
+                    <!-- DAFTAR MEDIA SOSIAL & WHATSAPP (KE BAWAH + TEKS DI SAMPING) -->
+                    <div class="flex flex-col space-y-2.5 text-gray-600">
+                        <a href="https://www.instagram.com/kelurahanloktabatutara/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 hover:text-blue-600 transition group">
+                            <img src="assets/instagram-2-1-logo-svgrepo-com.svg" alt="Instagram" class="w-5 h-5 group-hover:scale-110 transition-transform">
+                            <span>@kelurahanloktabatutara</span>
+                        </a>
+                        <a href="https://www.facebook.com/p/Kelurahan-Loktabat-Utara-100089907502483" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 hover:text-blue-600 transition group">
+                            <img src="assets/facebook-color-svgrepo-com.svg" alt="Facebook" class="w-5 h-5 group-hover:scale-110 transition-transform">
+                            <span>Kelurahan Loktabat Utara</span>
+                        </a>
+                        <a href="https://wa.me/6282152708593" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 hover:text-green-600 transition group">
+                            <img src="assets/whatsapp-svgrepo-com.svg" alt="WhatsApp" class="w-5 h-5 group-hover:scale-110 transition-transform">
+                            <span>0812-3456-7890</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-400 text-xs mt-8">&copy; 2026 SOLUT Loktabat Utara. All rights reserved.</div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

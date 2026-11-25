@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLUT - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <header class="bg-white shadow-sm sticky top-0 z-50 w-full">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Tautan Logo SOLUT ke index.html -->
+            <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                <div class="text-blue-600 font-bold text-2xl">SOLUT</div>
+                <div class="text-xs text-gray-500 uppercase leading-tight">Dashboard<br>Loktabat Utara</div>
+            </a>
+            <div class="flex gap-3 items-center">
+                <span id="labelPetugasAktif" class="text-sm font-medium text-gray-600 hidden sm:block"></span>
+                <button id="btnLogout" class="bg-red-50 text-red-600 border border-red-200 px-4 py-2 rounded-md text-sm font-medium hover:bg-red-100 transition">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow py-10 px-4 container mx-auto max-w-5xl">
+        <div class="flex justify-between items-end mb-6">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-800">Daftar Permohonan Warga</h1>
+                <p class="text-sm text-gray-500 mt-1">Pilih data untuk melihat detail berkas dan teks.</p>
+            </div>
+            <!-- Tombol Tambah Akun disembunyikan secara default, JS akan membukanya jika Admin -->
+            <button id="btnBukaModalAdmin" class="hidden bg-green-600 text-white px-4 py-2 text-sm rounded-md hover:bg-green-700 shadow-sm font-medium">+ Buat Akun Petugas</button>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border overflow-hidden">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-gray-50 border-b text-sm text-gray-600 uppercase tracking-wide">
+                        <th class="p-4 font-semibold">Nama Pemohon</th>
+                        <th class="p-4 font-semibold">Jenis Surat</th>
+                        <th class="p-4 font-semibold">No. HP</th>
+                        <th class="p-4 font-semibold text-center">Aksi</th>
+                    </tr>
+                </thead>
+                <!-- ID tabelData digunakan JS untuk memasukkan data asli dari Firestore -->
+                <tbody id="tabelData" class="divide-y divide-gray-100 text-sm text-gray-700">
+                    <tr class="hover:bg-gray-50">
+                        <td class="p-4 font-medium" colspan="4" text-center>Sedang memuat data dari database...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Modal Form Tambah Akun (Overlay) -->
+    <div id="modalAdmin" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl shadow-lg w-full max-w-sm p-6 relative">
+            <h2 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2">Buat Akun Petugas Baru</h2>
+            <form id="formBuatAkun" class="space-y-4">
+                <div>
+                    <label class="block text-sm text-gray-700 mb-1">Username (Tanpa spasi)</label>
+                    <input type="text" id="newUsername" class="w-full border p-2 rounded outline-none focus:border-blue-500" required>
+                </div>
+                <div>
+                    <label class="block text-sm text-gray-700 mb-1">Password</label>
+                    <input type="password" id="newPassword" class="w-full border p-2 rounded outline-none focus:border-blue-500" required>
+                </div>
+                <div class="flex justify-end gap-2 mt-4 pt-4 border-t">
+                    <button type="button" id="btnTutupModal" class="px-4 py-2 border rounded text-gray-600 hover:bg-gray-50">Batal</button>
+                    <button type="submit" id="btnSubmitAkun" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Buat Akun</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
